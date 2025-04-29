@@ -1,0 +1,43 @@
+name: 🐍 Generate Snake Contribution GIF
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Generate Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake.gif
+            assets/github-snake.svg
+            assets/github-snake.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+
+      - name: Commit files
+        run: |
+          git config user.email "${{ github.repository_owner }}@users.noreply.github.com"
+          git config user.name "${{ github.repository_owner }}"
+          git add .
+          git commit -m ":snake:"
+        continue-on-error: true
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          branch: main
