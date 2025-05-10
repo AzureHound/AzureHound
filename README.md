@@ -1,4 +1,7 @@
-<h1 align="left"> <img height="35px" src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="35px"/> Hello World!</h1>
+<h1 align="left">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Waving%20Hand.webp" alt="Waving Hand" width="35px" height="35px"/>
+  Hello World!
+</h1>
 
 ```sh
 fn main() {
