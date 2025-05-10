@@ -18,6 +18,7 @@ fn main() {
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=AzureHound&repo=Razer&bg_color=24273a&text_color=cad3f5&icon_color=c6a0f6&title_color=8bd5ca&hide_border=true" alt="Razer Repo Preview" width="400">
   </a>
 </p>
+
 ![GitHub Snake](https://github.com/AzureHound/AzureHound/raw/main/assets/github-snake.svg)
 
 <p align="center">
