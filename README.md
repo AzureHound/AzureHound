@@ -6,7 +6,7 @@
 ```sh
 fn main() {
     let name = 'AzureHound';
-    let location = 'Terra, Sol System'
+    let location = '~/dev'
 }
 
 ```
